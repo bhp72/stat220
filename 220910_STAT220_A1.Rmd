@@ -1,0 +1,21 @@
+---
+title: "STAT220 Assignment 1"
+author: "Benjamin Preston"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magick)
+
+```
+
+```{r}
+jonah <- image_read("https://media.giphy.com/media/3o6ZtokgzQv6ThHzj2/giphy.gif")
+
+jonah %>% image_annotate("  FFS, is this still a thing?  ", size = 30, color = "white", 
+                         gravity = "southwest", location = "+0+20") 
+
+```
+
